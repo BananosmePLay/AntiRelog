@@ -327,8 +327,11 @@ public class PvPManager {
     }
 
     public void forceStartPvP(Player player1, Player player2) {
-        startPvp(player1, false, true);
-        startPvp(player2, false, false);
+        boolean player1Bypass = player1.hasPermission("antirelog.bypass") || player1.hasPermission("antirelog.bypass.powerups");
+        boolean player2Bypass = player2.hasPermission("antirelog.bypass") || player2.hasPermission("antirelog.bypass.powerups");
+
+        startPvp(player1, player1Bypass, true);
+        startPvp(player2, player2Bypass, false);
         Bukkit.getPluginManager().callEvent(new PvpStartedEvent(player2, player1, settings.getPvpTime(), PvPStatus.ALL_NOT_IN_PVP));
     }
 }

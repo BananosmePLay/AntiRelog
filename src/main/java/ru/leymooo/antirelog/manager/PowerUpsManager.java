@@ -26,7 +26,7 @@ public class PowerUpsManager {
     }
 
     public boolean disablePowerUps(Player player) {
-        if (player.hasPermission("antirelog.bypass.powerups")) {
+        if (player.hasPermission("antirelog.bypass") || player.hasPermission("antirelog.bypass.powerups")) {
             return false;
         }
 
