@@ -4,7 +4,7 @@ main: ru.leymooo.antirelog.Antirelog
 api-version: 1.16
 prefix: AntiRelog
 softdepend: [Essentials, SuperVanish, PremiumVanish, VanishNoPacket, WorldGuard, LibsDisguises, ProtocolLib]
-authors: [Leymooo]
+authors: [Bananosme_Play]
 description: AntiRelog
 website: http://rubukkit.org/threads/125331/
 commands:
